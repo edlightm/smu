@@ -1,0 +1,40 @@
+<div class="col-sm-8" style="float:none; margin:0 auto;">
+  <div class="form-box">
+      <div class="form-top">
+          <div class="form-top-left">
+              <h3>SMU Dashboard</h3>
+          </div>
+          <div class="form-top-right">
+              <i class="fa fa-bell"></i>
+          </div>
+          <div class=""><a href="#/home">Sign Out</a></div>
+      </div>
+      
+  </div>
+  
+  
+  <div class="form-bottom">
+  	<h3 > 
+              <div ng-repeat='item in person'>
+                   Welcome  {{item.surname}}  {{item.firstnames}} <br />
+                   Your Applicant: {{item.applicant_number}}
+                </div></h3>
+                
+  </div>
+  
+  <div class="alert alert-info">
+      <strong>Info!</strong> Thank for registering. Please pay your application fee through Eco-cash or ZB Banks for your
+      application to be considered for selection.
+  </div>
+  
+  <div class="alert alert-info" style="margin-top:10px">
+      <strong>Info!</strong> Application status {{acceptstatus}}. <br />
+      <div ng-repeat="acc in accept">
+      	Accepted in Programme: {{acc.programme_name}} <br />
+        Attendance Type: {{acc.attendance_type_name}}
+      </div>
+  </div>
+  
+  
+  
+</div>

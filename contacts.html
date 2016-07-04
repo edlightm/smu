@@ -1,0 +1,66 @@
+<div class="col-sm-8" style="float:none; margin:0 auto;">
+  <div class="form-box">
+      <div class="form-top">
+          <div class="form-top-left">
+              <h3> 
+              <div ng-repeat='item in person'>
+                   Welcome  {{item.surname}}  {{item.firstnames}} <br />
+                   Your Applicant: {{item.applicant_number}}
+                </div></h3>
+              <p>Edit your Contact Details</p>
+          </div>
+          <div class="form-top-right">
+              <i class="fa fa-pencil"></i>
+          </div>
+      </div>
+      
+      <div class="form-bottom">
+      	<form role="form" name="ContactDetails">
+                        
+            <div class="well well-sm">Contact Information</div>
+            
+            <div class="form-group">
+                <label class="sr-only" for="form-mobile">Mobile</label>
+                <input type="text" name="form-mobile" placeholder="Mobile number..." class="form-mobile form-control" id="form-mobile" ng-model="mobile">
+            </div>
+            
+            <div class="form-group">
+                <label class="sr-only" for="form-phone">Phone (Land)</label>
+                <input type="text" name="form-phone" placeholder="Phone number..." class="form-phone form-control" id="form-phone" ng-model="phone">
+            </div>
+            
+            <div class="form-group">
+                <label class="sr-only" for="form-email">Email</label>
+                <input type="text" name="form-email" placeholder="Email number..." class="form-email form-control" id="form-email" ng-model="email">
+            </div>
+            
+            <div class="form-group">
+              <label class="sr-only" for="form-permanentaddress">Permanent Address:</label>
+              <textarea name="form-permanentaddress" placeholder="Permanent Address..." class="form-control" rows="5" id="form-permanentaddress" ng-model="permanentaddress"></textarea>
+            </div>
+                       
+            <div class="form-group">
+                <label for="form-permanentaddress-town">Permanent Address Town</label>
+                <select id="form-permanentaddress-town" class="form-permanentaddress-town form-control" ng-model="permanentaddresstown" placeholder="Select your town ...">
+                    <option ng-repeat="town in towns" value="{{town.town_id}}">{{town.town_name}}</option>
+                 </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="sr-only" for="form-postaladdress">Postal Address:</label>
+              <textarea name="form-postaladdress" placeholder="Postal Address..." class="form-control" rows="5" id="form-postaladdress" ng-model="postaladdress"></textarea>
+            </div>
+                       
+            <div class="form-group">
+                <label for="form-postaladdress-town">Postal Address Town</label>
+                <select id="form-postaladdress-town" class="form-postaladdress-town form-control" ng-model="postaladdresstown" placeholder="Select your town ...">
+                    <option ng-repeat="townz in towns" value="{{townz.town_id}}">{{townz.town_name}}</option>
+                 </select>
+            </div>
+           
+            <button type="submit" class="btn" ng-click="saveContacts()" >Save my Contacts</button>
+
+        </form>
+      </div>
+  </div>
+</div>

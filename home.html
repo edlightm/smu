@@ -1,0 +1,46 @@
+<div class="col-sm-8" style="float:none; margin:0 auto;">
+  <div class="form-box">
+      <div class="form-top">
+          <div class="form-top-left">
+              <h3>Login to SMU</h3>
+          </div>
+          <div class="form-top-right">
+              <i class="fa fa-lock"></i>
+          </div>
+      </div>
+      <div class="form-bottom">
+          <form role="form" action="" method="post" class="login-form">
+              <div class="form-group">
+                  <label class="sr-only" for="form-username">Username</label>
+                  <input type="text" ng-model="uname" name="form-username" placeholder="Applicant number..." class="form-username form-control" id="form-username">
+              </div>
+              <div class="form-group">
+                  <label class="sr-only" for="form-password">Password</label>
+                  <input type="password" ng-model="pword" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+              </div>
+              <button type="submit" ng-click="signinData()" class="btn">Sign in!</button>
+          </form>
+      </div>
+      
+      <div class="form-bottom" style="margin-top:10px;">
+      	<div class="btn">
+        	Don't have an account? <a href="#/signup">Signup</a>
+        </div>
+      </div>
+  </div>
+  
+  <div class="social-login">
+      <h3>Follow SMU on:</h3>
+      <div class="social-login-buttons">
+          <a class="btn btn-link-2" href="#">
+              <i class="fa fa-facebook"></i> Facebook
+          </a>
+          <a class="btn btn-link-2" href="#">
+              <i class="fa fa-twitter"></i> Twitter
+          </a>
+          <a class="btn btn-link-2" href="#">
+              <i class="fa fa-google-plus"></i> Google Plus
+          </a>
+      </div>
+  </div>
+</div>

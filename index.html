@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <!-- <base href="/try/" />  -->
+    <meta charset="UTF-8">
+    <title>Samora Machel University</title>
+    <script src="assets/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <script src="assets/angular-route.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.css"/>
+    
+    <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/google.fonts.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div>
+	<!-- Top content -->
+    <div class="top-content">
+        
+        <div class="inner-bg">
+            <div class="container" >
+                
+               <div class="row" style="height:40px;">
+                    <div class="col-sm-8 col-sm-offset-2 text" style="margin-top:5px; height:40px;">
+                        <h1><strong>Samora Machel University</strong> </h1>                        
+                    </div>
+                </div>
+                
+                <div class="row" ng-view>
+                    
+                </div> 
+                
+            </div>
+        </div><!-- inner-bg -->
+        
+    </div> <!-- top div -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="footer-border"></div>
+                    <p>Powered by <a href="#" target="_blank"><strong>Maguvu Edlight Simeon</strong></a> 
+                        <i class="fa fa-smile-o"></i></p>
+                </div>
+                
+            </div>
+        </div>
+    </footer> 
+    
+    <!-- Javascript -->
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/scripts.js"></script> 
+    <script src="assets/ngStorage.js"></script> 
+    
+    <!-- Other systems Controllers -->
+    <script src="signupCtrl.js"></script>     
+    <script src="personalCtrl.js"></script> 
+    <script src="contactsCtrl.js"></script> 
+    <script src="nokCtrl.js"></script>  
+    <script src="olevelCtrl.js"></script>     
+    <script src="alevelCtrl.js"></script> 
+    <script src="programmesCtrl.js"></script> 
+    <script src="signinCtrl.js"></script> 
+    <script src="dashboardCtrl.js"></script>  
+      
+</div>
+</body>
+</html>

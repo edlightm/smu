@@ -1,0 +1,77 @@
+<div class="col-sm-8" style="float:none; margin:0 auto;">
+  <div class="form-box">
+      <div class="form-top">
+          <div class="form-top-left">
+              <h3> 
+              <div ng-repeat='item in person'>
+                   Welcome  {{item.surname}}  {{item.firstnames}} <br />
+                   Your Applicant: {{item.applicant_number}}
+                </div></h3>
+              <p>Edit your A-Level Details</p>
+          </div>
+          <div class="form-top-right">
+              <i class="fa fa-pencil"></i>
+          </div>
+      </div>
+      
+      <div class="form-bottom">
+      	<form role="form" name="OlevelDetails">
+                        
+            <div class="well well-sm">A-Level Information</div>
+            
+            <div class="form-group">
+                <label for="form-exam-board">Select Exam Board</label>
+                <select id="form-exam-board" class="form-exam-board form-control" ng-model="emboard" placeholder="Select your board ...">
+                    <option ng-repeat="board in examboard" value="{{board.exam_board_id}}">{{board.exam_board_name}}</option>
+                 </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="form-subject">Select Subject</label>
+                <select id="form-subject" class="form-subject form-control" ng-model="subject" placeholder="Select your subject ...">
+                    <option ng-repeat="subject in subjects" value="{{subject.subject_id}}">{{subject.subject_name}}</option>
+                 </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="form-results">Select Results</label>
+                <select id="form-results" class="form-results form-control" ng-model="examresults" placeholder="Select your results ...">
+                    <option ng-repeat="result in results" value="{{result.result_id}}">{{result.result_name}}</option>
+                 </select>
+            </div>
+            
+            
+                       
+            <button type="submit" class="btn" ng-click="saveAlevelResult()" >Save A Level Result</button>
+
+        </form>
+        
+        <div style="margin-top:10px">
+        	<table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Board</th>
+                    <th>Result</th>
+                    <th>Weight</th>
+                    <th>--</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="res in resultz">
+                    <td>{{res.subject_name}}</td>
+                    <td>{{res.exam_board_name}}</td>
+                    <td>{{res.result_name}}</td>
+                    <td>{{res.result_weight}}</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        
+        <div>
+        	<button type="submit" class="btn" ng-click="doneAlevel()" >Done</button>
+        </div>
+      </div>
+  </div>
+</div>
